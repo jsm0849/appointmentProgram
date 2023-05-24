@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="858.0" prefWidth="1082.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ReportsController">
+   <children>
+      <TableView fx:id="contactView" layoutX="171.0" layoutY="45.0" prefHeight="244.0" prefWidth="850.0">
+         <columns>
+            <TableColumn fx:id="contactViewTitleColumn" prefWidth="64.0" text="Title" />
+            <TableColumn fx:id="contactViewDescriptionColumn" prefWidth="127.0" text="Description" />
+            <TableColumn fx:id="contactViewLocationColumn" prefWidth="124.0" text="Location" />
+            <TableColumn fx:id="contactViewApptIDColumn" prefWidth="57.0" text="Appt. ID" />
+            <TableColumn fx:id="contactViewTypeColumn" prefWidth="109.0" text="Type" />
+            <TableColumn fx:id="contactViewStartDTColumn" prefWidth="124.0" text="Start Date/Time" />
+            <TableColumn fx:id="contactViewEndDTColumn" prefWidth="130.0" text="End Date/Time" />
+            <TableColumn fx:id="contactViewCustomerIDColumn" prefWidth="116.0" text="Customer ID" />
+         </columns>
+      </TableView>
+      <TableView fx:id="typeView" layoutX="62.0" layoutY="331.0" prefHeight="200.0" prefWidth="362.0">
+        <columns>
+          <TableColumn fx:id="typeViewTypeColumn" prefWidth="142.0" text="Type of Appointment" />
+          <TableColumn fx:id="typeViewNumApptsColumn" prefWidth="219.0" text="Number of Appointments this Month" />
+        </columns>
+      </TableView>
+      <ComboBox fx:id="yearComboBox" layoutX="467.0" layoutY="359.0" onAction="#yearSelected" prefWidth="150.0" />
+      <ComboBox fx:id="monthComboBox" layoutX="467.0" layoutY="440.0" onAction="#monthSelected" prefWidth="150.0" />
+      <Label layoutX="14.0" layoutY="1.0" text="Reports">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="62.0" layoutY="28.0" text="Appointment Schedule for each Contact Person" />
+      <Label layoutX="62.0" layoutY="313.0" text="Total Number of Appointments by Type and Month" />
+      <TableView fx:id="locationView" layoutX="171.0" layoutY="574.0" prefHeight="244.0" prefWidth="850.0">
+         <columns>
+            <TableColumn fx:id="locViewApptIDColumn" prefWidth="67.0" text="Appt. ID" />
+            <TableColumn fx:id="locViewTitleColumn" prefWidth="107.0" text="Title" />
+            <TableColumn fx:id="locViewDescriptionColumn" prefWidth="91.0" text="Description" />
+            <TableColumn fx:id="locViewContactColumn" prefWidth="123.0" text="Contact" />
+            <TableColumn fx:id="locViewTypeColumn" prefWidth="103.0" text="Type" />
+            <TableColumn fx:id="locViewStartDTColumn" prefWidth="127.0" text="Start Date/Time" />
+            <TableColumn fx:id="locViewEndDTColumn" prefWidth="129.0" text="End Date/Time" />
+            <TableColumn fx:id="locViewCustomerIDColumn" prefWidth="107.0" text="Customer ID" />
+         </columns>
+      </TableView>
+      <Label layoutX="62.0" layoutY="557.0" text="Master Schedule for each Location in the Organization" />
+      <Label layoutX="512.0" layoutY="342.0" text="Select Year" />
+      <Label layoutX="506.0" layoutY="423.0" text="Select Month" />
+      <Button fx:id="mainMenuButton" layoutX="983.0" layoutY="826.0" mnemonicParsing="false" onAction="#mainMenu" text="Main Menu" />
+      <TableView fx:id="contactV" layoutX="62.0" layoutY="45.0" prefHeight="244.0" prefWidth="109.0">
+        <columns>
+          <TableColumn fx:id="contactViewContactColumn" prefWidth="109.0" text="Contact" />
+        </columns>
+      </TableView>
+      <TableView fx:id="locationV" layoutX="62.0" layoutY="574.0" prefHeight="244.0" prefWidth="109.0">
+        <columns>
+          <TableColumn fx:id="locViewLocationColumn" prefWidth="109.0" text="Location" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
